@@ -1,0 +1,31 @@
+﻿@model List<Departamento>
+
+<h1>Vista departamentos</h1>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Localidad</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(Departamento dept in Model)
+        {
+            <tr>
+                <td>@dept.IdDepartamento</td>
+                <td>@dept.Nombre</td>
+                <td>@dept.Localidad</td>
+                <td class="btn btn-info">
+                    @Html.ActionLink("Details", "Details", "Departamentos", new { idDepartamento = dept.IdDepartamento }) | 
+                    @Html.ActionLink("Delete", "Delete", "Departamentos", new { idDepartamento = dept.IdDepartamento }) |
+                    @Html.ActionLink("Update", "Update", "Departamentos", new { idDepartamento = dept.IdDepartamento })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+

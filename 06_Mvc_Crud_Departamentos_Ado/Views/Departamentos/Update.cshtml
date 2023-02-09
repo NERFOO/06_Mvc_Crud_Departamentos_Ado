@@ -1,0 +1,23 @@
+﻿@model Departamento
+
+<h1>Actualizar departamento</h1>
+
+<a asp-controller="Departamentos" asp-action="Index">Index</a>
+
+<form method="post">
+    <input type="hidden" name="idDepartamento" value="@Model.IdDepartamento" />
+    <label>Nombre</label>
+    <input type="text" name="nombre" class="form-control" value="@Model.Nombre" />
+    <label>Localidad</label>
+    <input type="text" name="localidad" class="form-control" value="@Model.Localidad" />
+
+    <button type="submit" class="btn btn-success">Actualizar departamento</button>
+</form>
+
+<h2 style="color: red">@ViewData["MENSAJE"]</h2>
+
+
+
+
+
+

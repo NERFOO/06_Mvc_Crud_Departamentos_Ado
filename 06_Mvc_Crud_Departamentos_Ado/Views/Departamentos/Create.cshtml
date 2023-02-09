@@ -1,0 +1,15 @@
+﻿
+<h1>Crear nuevo departamento</h1>
+
+<form method="post">
+    <label>Id departamento</label>
+    <input type="text" name="idDepartamento" class="form-control" required />
+    <label>Nombre</label>
+    <input type="text" name="nombre" class="form-control" required />
+    <label>Localidad</label>
+    <input type="text" name="localidad" class="form-control" required />
+
+    <button type="submit" class="btn btn-success">Crear departamento</button>
+</form>
+
+<h2 style="color: red">@ViewData["MENSAJE"]</h2>
